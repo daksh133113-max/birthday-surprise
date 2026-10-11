@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f6">
+  <title>A Birthday Surprise For You 💗</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="ambient-hearts" aria-hidden="true"></div>
+  <div class="sparkle-layer" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <div class="topline"><span class="tiny-heart">♥</span> A LITTLE SURPRISE MADE WITH LOVE <span class="tiny-heart">♥</span></div>
+    <div class="progress" aria-label="Birthday surprise progress">
+      <span class="progress-step active" data-progress="0">01</span>
+      <i></i><span class="progress-step" data-progress="1">02</span>
+      <i></i><span class="progress-step" data-progress="2">03</span>
+      <i></i><span class="progress-step" data-progress="3">04</span>
+      <i></i><span class="progress-step" data-progress="4">05</span>
+    </div>
+
+    <!-- PAGE 1: INTRO -->
+    <section class="screen active" id="page-intro">
+      <article class="glass-card intro-card">
+        <div class="orbit orbit-one">✦</div><div class="orbit orbit-two">♡</div>
+        <div class="intro-illustration" aria-hidden="true"><span>🎁</span><span class="mini-spark">✧</span></div>
+        <p class="eyebrow">Someone very special has a birthday</p>
+        <h1>Hey, <span class="gradient-text">Happy Birthday Beautiful</span></h1>
+        <p class="lead">I made a tiny little world just for you.<br>There are a few surprises waiting inside…</p>
+        <p class="handwritten">Ready to make a wish? ✨</p>
+        <button class="btn btn-primary" id="beginBtn" onclick="showBirthdayPage(1)">Open your surprise <span>♡</span></button>
+        <p class="microcopy">Psst… keep going until the very end 💌</p>
+      </article>
+    </section>
+
+    <!-- PAGE 2: CANDLE -->
+    <section class="screen" id="page-candle">
+      <article class="glass-card candle-card">
+        <p class="eyebrow">Surprise 1 of 4</p>
+        <h2>Make a wish… <span class="gradient-text">then blow!</span></h2>
+        <p class="lead">Close your eyes for a second and wish for something beautiful.</p>
+        <div class="cake-scene" id="cakeScene">
+          <div class="candle">
+            <div class="flame" id="flame"><span></span></div>
+            <div class="wick"></div>
+            <div class="candle-body"></div>
+          </div>
+          <div class="frosting"></div>
+          <div class="cake-top"></div>
+          <div class="cake-body"><span class="icing icing-one"></span><span class="icing icing-two"></span><span class="icing icing-three"></span></div>
+          <div class="cake-plate"></div>
+          <div class="cake-sprinkles">✦　·　✧　·　✦</div>
+        </div>
+        <p class="candle-status" id="candleStatus">Your candle is waiting for your wish 🕯️</p>
+        <button class="btn btn-primary" id="blowBtn">🌬️ Blow the candle</button>
+        <button class="btn btn-text" id="candleNextBtn" onclick="showBirthdayPage(2)" hidden>My wish is made — next surprise →</button>
+        <p class="microcopy">A little button-powered magic, just for you.</p>
+      </article>
+    </section>
+
+    <!-- PAGE 3: MUSIC -->
+    <section class="screen" id="page-music">
+      <article class="glass-card music-card">
+        <p class="eyebrow">Surprise 2 of 4</p>
+        <div class="music-art" aria-hidden="true">
+          <div class="vinyl"><div class="vinyl-label">♡</div></div>
+          <span class="music-note note-a">♪</span><span class="music-note note-b">♫</span><span class="music-note note-c">♪</span>
+        </div>
+        <h2>A song, <span class="gradient-text">just for you</span></h2>
+        <p class="lead">Let this little tune make your birthday feel even more special.</p>
+        <div class="track-card">
+          <div class="track-icon">♫</div>
+          <div class="track-info"><strong>Happy Birthday kaju katli </strong><span id="musicStatus">Ready to play your song</span></div>
+          <button class="round-btn" id="musicToggle" aria-label="Play or pause birthday song">▶</button>
+        </div>
+        <div class="sound-wave" id="soundWave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="microcopy"><code></code></p>
+        <button class="btn btn-primary" id="musicNextBtn" onclick="showBirthdayPage(3)">Keep the memories coming →</button>
+      </article>
+    </section>
+
+    <!-- PAGE 4: PHOTOS -->
+    <section class="screen" id="page-photos">
+      <article class="glass-card photos-card">
+        <p class="eyebrow">Surprise 3 of 4</p>
+        <h2>Little moments, <span class="gradient-text">big memories</span> 📸</h2>
+        <p class="lead">Every photo holds a feeling. Add the moments you never want to forget.</p>
+        <div class="photo-grid" id="photoGrid">
+          <button class="photo-item memory-photo" type="button" aria-label="Open memory 1" data-photo="photos/memory-01.jpeg">
+            <img src="photos/memory-01.jpeg" alt="Birthday memory 1" loading="lazy">
+          </button>
+          <button class="photo-item memory-photo" type="button" aria-label="Open memory 2" data-photo="photos/memory-02.jpeg">
+            <img src="photos/memory-02.jpeg" alt="Birthday memory 2" loading="lazy">
+          </button>
+          <button class="photo-item memory-photo" type="button" aria-label="Open memory 3" data-photo="photos/memory-03.jpeg">
+            <img src="photos/memory-03.jpeg" alt="Birthday memory 3" loading="lazy">
+          </button>
+          <button class="photo-item memory-photo" type="button" aria-label="Open memory 4" data-photo="photos/memory-04.jpeg">
+            <img src="photos/memory-04.jpeg" alt="Birthday memory 4" loading="lazy">
+          </button>
+          <button class="photo-item memory-photo" type="button" aria-label="Open memory 5" data-photo="photos/memory-05.jpeg">
+            <img src="photos/memory-05.jpeg" alt="Birthday memory 5" loading="lazy">
+          </button>
+          <button class="photo-item memory-photo" type="button" aria-label="Open memory 6" data-photo="photos/memory-06.jpeg">
+            <img src="photos/memory-06.jpeg" alt="Birthday memory 6" loading="lazy">
+          </button>
+          <button class="photo-item memory-photo" type="button" aria-label="Open memory 7" data-photo="photos/memory-07.jpeg">
+            <img src="photos/memory-07.jpeg" alt="Birthday memory 7" loading="lazy">
+          </button>
+          <button class="photo-item memory-photo" type="button" aria-label="Open memory 8" data-photo="photos/memory-08.jpeg">
+            <img src="photos/memory-08.jpeg" alt="Birthday memory 8" loading="lazy">
+          </button>
+        </div>
+        <p class="microcopy">A little collection of our memories, just for you. Tap any photo to see it bigger. 💗</p>
+        <div class="photo-lightbox" id="photoLightbox" aria-hidden="true">
+          <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close photo">×</button>
+          <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous photo">‹</button>
+          <img id="lightboxImage" src="" alt="Memory enlarged">
+          <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Next photo">›</button>
+        </div>
+        <button class="btn btn-primary" id="photosNextBtn" onclick="showBirthdayPage(4)">One last little surprise →</button>
+      </article>
+    </section>
+
+    <!-- PAGE 5: LETTER -->
+    <section class="screen" id="page-letter">
+      <article class="glass-card letter-card">
+        <div class="letter-stamp">♡</div>
+        <p class="eyebrow">Surprise 4 of 4 · From my heart</p>
+        <h2>For you, <span class="gradient-text">on your birthday</span></h2>
+        <div class="letter-divider"><span>✦</span></div>
+        <div class="letter-copy">
+         <p>Happy Birthday majhya bestieee! ❤️🥳🫶🏻</p>
+          <p>Honestly, kadhi vatlach navhta ki fakt 4-5 months madhye konasobat itki chhan friendship hoil. Tujhyashi bolna, masti karna, ekmekanna tras dena ani chhotya chhotya goshti share karna he sagla khup special zhalay majhyasathi. 😂❤️ Tujhyasobat jevdha comfortable feel zhalo, te kharach veglach aahe.</p>
+          <p>Madhye aaplyat misunderstandings zhale,misunderstandings nahi bolu shakat ,ek phase chalu hota ani thoda bolna kami hota, aadhi sarkha bolna hot navhta, pan aata sagla theek zhaly hope fully te sagla asach raho. Karan tu khup kami velat majhya life madhli ek important friend zhalis. 🫂❤️</p>
+          <p>Ani ho, tu mala nehmi motivate kartes ani support kartes. Tula ek divas CA zhalel baghaychay mala! 🥹❤️ Khup mehnat kar, tuzha dream complete kar ani saglyanna proud feel karav. Madam CA Sahiba, mag aamchyasarkhya normal lokanna visru nako ha! 😂😭🧿</p>
+          <p>Tu nehmi happy raha, khup hasat raha ani life madhye khup success milav. Mi kadhi jast masti keli kiwa kahi faltu bollo asel tar sorry ha! 😂🫶🏻</p>
+          <p>Honestly, mala aapli friendship khup avadte ani ti ashich chhan rahavi asa vatata. Tu majhyasathi special friend aahes, ani aapan ashich ekmekanna support karat, masti karat ani chhan memories banavat rahava, evdhich wish aahe. ❤️😌</p>
+          <p>Maharaja kade ek cha magna aahe ya mulila kyam sukhi ani kush thev ani hicha haaath kontya cukichya mulachya hatat nko jau deu Maharaja ,diste vegli pan khup trass sahan kelay re tine aat a tila kush thev......</p>
+          <p>Ani ha mazha ashirwad kyam tuzhya sobat aahe , TATHASTU!!!</p>
+          <p class="signoff">Happy Birthday once again, majhya partner in bakchodi! 😂❤️🥳 Nehmi khush raha, CA banaycha dream complete kar ani aapli friendship ashich rahu de. Take care, enjoy your day to the fullest ani party dyayla visru nakos! 😂🫶🏻❤️🧿</p>
+      
+        </div>
+        </div>
+        <div class="letter-footer">Made with love, just for you <span>♥</span></div>
+        <button class="btn btn-secondary" id="restartBtn">↻ Experience it again</button>
+      </article>
+    </section>
+
+    <footer class="site-footer">A little page full of love <span>♥</span></footer>
+  </main>
+
+  <audio id="birthdaySong" src="./varoon.mp4" loop preload="auto"></audio>
+</body>
+</html>
